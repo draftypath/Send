@@ -338,6 +338,14 @@
     opacity: .58;
   }
   @media (prefers-reduced-motion: reduce) { .views.enter { animation: none; } .tab-ind { transition: none; } }
+  /* phones: one even rhythm. The empty space between one block and the next
+     is about the same everywhere, whether or not a line sits under the
+     screenshot, so the column reads at a steady pace instead of tight-then-wide. */
+  @media (max-width: 700px) {
+    .views { gap: 3rem; }
+    .note { margin-top: .75rem; }
+    .views > li:not(.trio):not(.lede):not(.closer):not(:has(.note)) { padding-bottom: .75rem; }
+  }
 </style>
 </head>
 <body>
